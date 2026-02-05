@@ -16,7 +16,7 @@
   min-height: 24px !important;
 
   /* 3. 배경 이미지 설정 */
-  background-image: url('https://heojunhyoung.github.io/images/tistory_logo_reverse.png') !important;
+  background-image: url('https://heojunhyoung.github.io/images/tistory_white.png') !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: 60% !important; /* 이미지 크기 (원 안의 비율) */
@@ -37,5 +37,5 @@
 
 /* 마우스 올렸을 때 (Hover) */
 a:hover .fa-tistory-custom {
-  background-image: url('https://heojunhyoung.github.io/images/tistory_logo.png') !important;
+  background-image: url('https://heojunhyoung.github.io/images/tistory_black.png') !important;
 }
