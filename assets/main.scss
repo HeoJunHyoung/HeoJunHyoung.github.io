@@ -6,17 +6,26 @@
 
 /* 티스토리 커스텀 아이콘 스타일 */
 .fa-tistory-custom {
-  display: inline-block;
-  width: 20px; /* 사이드바 아이콘 크기에 맞춤 */
-  height: 20px;
-  background: url('https://heojunhyoung.github.io/images/tistory_logo.png') no-repeat center;
-  background-size: contain;
-  vertical-align: middle;
+  display: inline-block !important;
+  width: 18px !important;  /* 테마 아이콘 크기에 맞춰 미세 조정 */
+  height: 18px !important;
+  background-image: url('https://heojunhyoung.github.io/images/tistory_logo.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  vertical-align: middle !important;
   transition: background 0.3s ease;
+  position: relative;
+  top: -1px; /* 위치 정렬이 안 맞을 경우 조정 */
+}
+
+/* 중요: 기존 폰트어썸 아이콘 문자(글자)를 제거 */
+.fa-tistory-custom::before {
+  content: "" !important;
+  display: none !important;
 }
 
 /* 마우스 올렸을 때 이미지 교체 */
 a:hover .fa-tistory-custom {
-  background: url('https://heojunhyoung.github.io/images/tistory_logo_reverse.png') no-repeat center;
-  background-size: contain;
+  background-image: url('https://heojunhyoung.github.io/images/tistory_logo_reverse.png') !important;
 }
