@@ -42,22 +42,22 @@ content:
   - title: Skills
     layout: list
     content:
-      type: skill # _data/skill.yml 호출
+      type: skills 
 
   - title: Projects
     layout: list
     content:
-      type: projects # _data/projects.yml 호출
+      type: projects 
 
   - title: Education
     layout: list
     content:
-      type: education # _data/education.yml 호출
+      type: education 
 
   - title: ETC
-    layout: text
+    layout: list    
     content:
-      type: more # _data/more.yml 호출
+      type: more    
 
 # Footer
 footer_show_references: true
