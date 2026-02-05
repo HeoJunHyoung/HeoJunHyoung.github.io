@@ -1,39 +1,68 @@
-# Site
+# Site Settings
 repository: HeoJunHyoung/HeoJunHyoung.github.io
-
-# Content configuration version
 version: 2
 
-# Personal info
+# Personal Information
 name: 허준형
 title: 서버 백엔드 엔지니어
 email: junhyoung.heo@gmail.com
 
-# Dark Mode (true/false/never)
+# Appearance
 darkmode: never
 
-# Social links
+# Social Links
 github_username: HeoJunHyoung
 
-# Additional icon links
+# Additional Icon Links (커스텀 티스토리 아이콘 포함)
 additional_links:
   - title: Email
     icon: fas fa-envelope
     url: mailto:junhyoung.heo@gmail.com
   - title: Blog
-    icon: fa fa-tistory-custom 
+    icon: fa fa-tistory-custom # main.scss에 정의한 클래스명
     url: https://receiver40.tistory.com/
 
 # About Section
-about_profile_image: /images/profile.png
+about_profile_image: images/profile.png
 about_content: |
-  안정적인 서비스 운영을 위한 MSA(Microservices Architecture) 설계와 시스템 성능 튜닝에 깊은 관심을 가지고 있습니다. 
-  단순한 기능 구현을 넘어, 테스트와 모니터링을 통한 데이터 기반 의사결정을 지향하며, 실제 운영 환경에서 검증된 솔루션을 구현합니다.
+  **"단순한 기능 구현을 넘어, <mark>데이터와 지표로 시스템의 신뢰성을 증명</mark>하는 백엔드 개발자 허준형입니다."**
+  <br/>
+  안정적인 서비스 운영을 위해 아키텍처 설계와 시스템 성능 튜닝에 깊은 관심을 가지고 있습니다. 기술적 선택이 비즈니스 가치로 이어지기 위해서는 주관적인 판단이 아닌 <mark>객관적인 근거</mark>가 필요하다고 믿습니다.
+
+  이러한 철학을 바탕으로 다음과 같은 원칙을 지키며 개발합니다.
+
+  * **지표 기반의 문제 해결:** **Prometheus와 Grafana**를 활용한 모니터링 체계를 구축하여 시스템의 상태를 가시화합니다. 정의된 지표를 바탕으로 병목 지점을 파악하고, 최적화 전후의 결과를 <mark>수치로 검증</mark>하는 과정을 즐깁니다.
+  * **효율적인 성능 최적화:** 무분별한 기술 도입보다는 현재 시스템의 제약 사항을 분석하여 적재적소에 솔루션을 적용합니다. 캐싱 전략 수립, 인덱스 튜닝, 동시성 제어 등을 통해 자원을 효율적으로 사용하고 <mark>사용자 경험을 개선</mark>하는 데 집중합니다.
+  * **철저한 사전 검증:** **k6 부하 테스트**를 통해 운영 환경에서 발생할 수 있는 한계점을 선제적으로 탐색합니다.
+  <br/>
+  어제보다 더 견고하고 예측 가능한 시스템을 만드는 것에 보람을 느끼며, 꾸준한 기록과 학습을 통해 동료들과 함께 성장하는 개발자가 되고자 합니다.
+
+# Content Configuration
+content:
+  - title: Skills
+    layout: list
+    content:
+      type: skill # _data/skill.yml 호출
+
+  - title: Projects
+    layout: list
+    content:
+      type: projects # _data/projects.yml 호출
+
+  - title: Education
+    layout: list
+    content:
+      type: education # _data/education.yml 호출
+
+  - title: ETC
+    layout: text
+    content:
+      type: more # _data/more.yml 호출
 
 # Footer
 footer_show_references: true
 
-# Build settings
+# Build Settings
 remote_theme: sproogen/modern-resume-theme
 
 sass:
@@ -42,3 +71,17 @@ sass:
 
 plugins:
   - jekyll-seo-tag
+
+# Exclude files from build
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/",
+  "lib/",
+  "scripts/",
+  "docker-compose.yml"
+]
