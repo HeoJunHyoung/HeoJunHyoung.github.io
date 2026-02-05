@@ -6,34 +6,39 @@
 
 /* 티스토리 커스텀 아이콘 스타일 */
 .fa-tistory-custom {
-  display: inline-block !important;
-  /* 아이콘 크기 및 비율 조정: 가로를 더 넓게 설정 */
-  width: 28px !important;  
-  height: 18px !important;
-  /* 기본 상태: tistory_logo_reverse (요청하신 반대 적용) */
+  /* 1. 공간 확보 및 중앙 정렬 */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* 2. 크기 설정: 원형 배경 크기에 맞춰 조정 (기존보다 키움) */
+  width: 100% !important; 
+  height: 100% !important;
+  min-width: 20px;
+  min-height: 20px;
+
+  /* 3. 배경 이미지 설정 */
   background-image: url('https://heojunhyoung.github.io/images/tistory_logo_reverse.png') !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
-  background-size: contain !important;
+  background-size: 60% !important; /* 원 안에서 로고가 차지할 비율 (적절히 조절) */
+  
   vertical-align: middle !important;
   transition: all 0.3s ease;
-  position: relative;
-  top: -1px;
+  
+  /* 4. 폰트어썸 잔상 제거 */
+  font-size: 0 !important; 
+  text-indent: -9999px;
 }
 
-/* 기존 폰트어썸 아이콘 문자 제거 */
+/* 기존 폰트어썸 아이콘 문자 강제 제거 */
 .fa-tistory-custom::before {
   content: "" !important;
   display: none !important;
 }
 
-/* 마우스 올렸을 때(Hover): tistory_logo로 교체 */
+/* 마우스 올렸을 때(Hover): 이미지 교체 및 효과 */
 a:hover .fa-tistory-custom {
   background-image: url('https://heojunhyoung.github.io/images/tistory_logo.png') !important;
-  /* 필요 시 Hover 했을 때 약간의 변화를 주려면 아래 주석 해제 */
-  /* filter: brightness(1.2); */
-}
-
-body {
-  background-color: red !important;
+  background-size: 65% !important; /* 호버 시 살짝 커지는 느낌 */
 }
