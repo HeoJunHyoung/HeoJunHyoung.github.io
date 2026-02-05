@@ -3,3 +3,61 @@
 ---
 
 @import 'modern-resume-theme';
+
+/* ===================================
+   커스텀 Tistory 아이콘 - 100% 작동 버전
+   =================================== */
+
+// 1. 기존 스타일 확인용
+.social-links {
+  a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+// 2. Blog 아이콘에만 적용
+.social-links a[title="Blog"] {
+  .fa-blog {
+    // Font Awesome 기본 아이콘 완전히 제거
+    &::before {
+      content: "" !important;
+      font-size: 0 !important;
+      display: none !important;
+    }
+    
+    // 커스텀 아이콘 컨테이너
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    position: relative !important;
+    
+    // 기본 이미지
+    background: url('../images/tistory_logo.png') no-repeat center center !important;
+    background-size: contain !important;
+    transition: background-image 0.3s ease !important;
+  }
+  
+  // hover 시 이미지 변경
+  &:hover .fa-blog {
+    background: url('../images/tistory_logo_reverse.png') no-repeat center center !important;
+    background-size: contain !important;
+  }
+}
+
+/* ===================================
+   디버깅용 (배포 후 삭제 가능)
+   =================================== */
+.debug-mode {
+  .social-links a[title="Blog"] {
+    border: 2px solid #ff0000 !important;
+    background-color: rgba(255, 0, 0, 0.1) !important;
+    padding: 2px !important;
+  }
+  
+  .social-links a[title="Blog"] .fa-blog {
+    border: 2px solid #00ff00 !important;
+    background-color: rgba(0, 255, 0, 0.1) !important;
+  }
+}

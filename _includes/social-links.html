@@ -1,0 +1,17 @@
+<ul class="social-links debug-mode">
+  {% if site.github_username %}
+  <li>
+    <a href="https://github.com/{{ site.github_username }}" title="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  {% endif %} 
+  
+  {% for link in site.additional_links %}
+  <li>
+    <a href="{{ link.url }}" title="{{ link.title }}">
+      <i class="{{ link.icon }}"></i>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
