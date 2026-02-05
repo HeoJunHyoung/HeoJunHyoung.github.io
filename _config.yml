@@ -36,7 +36,7 @@ additional_links:
     icon: fas fa-envelope
     url: mailto:junhyoung.heo@gmail.com
   - title: Blog
-    icon: fas fa-blog  
+    icon: fa-tistory-custom 
     url: https://receiver40.tistory.com/
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
