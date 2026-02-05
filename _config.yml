@@ -34,9 +34,24 @@ github_username: HeoJunHyoung
 additional_links:
   - title: Email
     icon: fas fa-envelope
-    url: https://mail.google.com/mail/?view=cm&to=junhyoung.heo@gmail.com
+    url: mailto:junhyoung.heo@gmail.com
   - title: Blog
-    icon: fas fa-blog
+    icon: |
+      <style>
+        .blog-custom-icon {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          background: url('https://heojunhyoung.github.io/images/tistory_logo.png');
+          background-size: contain;
+          transition: background 0.3s ease;
+        }
+        .blog-custom-icon:hover {
+          background: url('https://heojunhyoung.github.io/images/tistory_logo_reverse.png');
+          background-size: contain;
+        }
+      </style>
+      <span class="blog-custom-icon"></span>
     url: https://receiver40.tistory.com/
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
