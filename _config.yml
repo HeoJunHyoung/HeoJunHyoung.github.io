@@ -26,7 +26,9 @@ about_profile_image: images/profile.png
 about_content: |
   <div class="slogan-container">
     <span class="quote-mark">“</span>
-    단순한 기능 구현을 넘어, 데이터와 지표로 시스템의 신뢰성을 증명하는 개발자
+      <span class="slogan-text">
+      단순한 기능 구현을 넘어, 데이터와 지표로 시스템의 신뢰성을 증명하는 개발자
+      </span>
     <span class="quote-mark">”</span>
   </div>
 
