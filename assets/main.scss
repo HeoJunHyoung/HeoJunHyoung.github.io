@@ -113,6 +113,8 @@ a:hover .fa-tistory-custom {
 
 
 
+
+
 .icons-wrapper {
   position: relative; /* last-updated 기준점 */
 }
@@ -165,22 +167,15 @@ a:hover .fa-tistory-custom {
 
 
 
-
-
-
-
-
-
-
-/* 프로젝트 카드 스타일 - 수정 버전 */
+/* 프로젝트 카드 스타일 - 최종 수정 버전 */
 .project-card {
   background-color: #ffffff !important;
   border: 1px solid #e0e0e0 !important;
   border-radius: 8px !important;
   padding: 25px !important;
-  margin-bottom: 20px !important; /* 카드 간 거리 줄임 */
+  margin-bottom: 20px !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
-  transition: none !important; /* 호버 애니메이션 제거 */
+  transition: none !important;
 }
 
 /* 호버 효과 제거 */
@@ -193,23 +188,30 @@ a:hover .fa-tistory-custom {
   display: flex !important;
   justify-content: space-between !important;
   align-items: flex-start !important;
-  margin-bottom: 10px !important; /* 여백 줄임 */
-  padding-bottom: 0 !important; /* 선 제거 */
-  border-bottom: none !important; /* 제목 아래 선 제거 */
+  margin-bottom: 10px !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
 }
 
-.project-card-title {
+/* 제목에 링크 추가 */
+.project-title-link {
   font-weight: 700 !important;
-  color: #000000 !important; /* 검정색으로 변경 */
-  font-size: 1.8rem !important; /* 글씨 크기 증가 */
+  color: #000000 !important;
+  font-size: 1.6rem !important; /* Skills 타이틀과 비슷한 크기 */
   margin: 0 !important;
   line-height: 1.3 !important;
   flex: 1 !important;
+  text-decoration: none !important;
+}
+
+.project-title-link:hover {
+  color: #0066cc !important; /* 파란색 하이퍼링크 */
+  text-decoration: underline !important;
 }
 
 .project-card-date {
-  font-size: 1.1rem !important;
-  color: #666666 !important; /* 어두운 회색 */
+  font-size: 1rem !important;
+  color: #666666 !important;
   font-weight: 500 !important;
   white-space: nowrap !important;
   margin-left: 20px !important;
@@ -220,15 +222,15 @@ a:hover .fa-tistory-custom {
 
 /* 서브타이틀 스타일 */
 .project-card-subtitle {
-  color: #777777 !important; /* 회색 */
-  margin: 5px 0 15px 0 !important; /* 위아래 여백 조정 */
-  font-size: 1.3rem !important; /* 글씨 크기 증가 */
+  color: #777777 !important;
+  margin: 5px 0 15px 0 !important;
+  font-size: 1.2rem !important;
   font-weight: 400 !important;
   line-height: 1.5 !important;
-  padding-bottom: 15px !important; /* 선과의 간격 */
+  padding-bottom: 15px !important;
   font-style: italic !important;
   font-family: 'Georgia', 'Times New Roman', serif !important;
-  border-bottom: 2px solid #f0f0f0 !important; /* 서브타이틀 아래 선 추가 */
+  border-bottom: 2px solid #f0f0f0 !important;
 }
 
 .project-card-content {
@@ -244,89 +246,58 @@ a:hover .fa-tistory-custom {
 
 .project-card-list li {
   margin-bottom: 12px !important;
-  font-size: 1.15rem !important; /* 글씨 크기 증가 */
-  color: #000000 !important; /* 검정색으로 변경 */
+  font-size: 1.1rem !important; /* Skills description과 비슷한 크기 */
+  color: #000000 !important;
   line-height: 1.6 !important;
-  padding-left: 24px !important;
+  padding-left: 20px !important;
   position: relative !important;
 }
 
-/* 화살표(>) 대신 원(●)으로 변경 */
+/* 기본 원 크기로 변경 */
 .project-card-list li:before {
-  content: "●" !important; /* 원으로 변경 */
-  color: #000000 !important; /* 검정색 */
-  font-size: 0.9rem !important; /* 크기 조정 */
+  content: "•" !important; /* 기본 원 */
+  color: #000000 !important;
+  font-size: 0.8rem !important; /* 기본 크기 */
   position: absolute !important;
   left: 0 !important;
-  top: 2px !important;
+  top: 3px !important;
 }
 
-/* GitHub 버튼 스타일 */
-.project-github-btn {
-  display: inline-block;
-  margin-top: 20px !important;
-  padding: 8px 16px !important;
-  background-color: #24292e !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  border-radius: 6px !important;
-  font-size: 0.95rem !important;
-  font-weight: 500 !important;
-  transition: background-color 0.2s !important;
-  border: none !important;
-}
-
-.project-github-btn:hover {
-  background-color: #444d56 !important;
-  text-decoration: none !important;
-  color: #ffffff !important;
-}
-
-.project-github-btn i {
-  margin-right: 6px !important;
-}
-
-/* 섹션 제목 스타일도 함께 키우기 */
+/* 섹션 제목 스타일도 함께 키우기 (Skills 타이틀과 동일하게) */
 h2 {
-  font-size: 2.4rem !important; /* 더 크게 */
-  margin-bottom: 25px !important; /* 카드와의 간격 조정 */
-  color: #000000 !important; /* 검정색 */
-  font-weight: 800 !important;
-  padding-left: 15px !important;
+  font-size: 2rem !important;
+  margin-bottom: 25px !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  padding-left: 0 !important;
+  border-left: none !important;
 }
 
-/* 다크모드 강제 비활성화 (설정에도 never로 되어 있어야 함) */
+/* Skills 섹션의 스타일을 참고하여 통일 */
+.content .list__item .list__item__content {
+  font-size: 1.1rem !important; /* Skills description 크기 */
+}
+
+/* About Me 수정 - 원래 스타일로 복원 */
+.name {
+  font-weight: normal !important;
+}
+
+.title {
+  font-weight: normal !important;
+  letter-spacing: normal !important;
+}
+
+.slogan-text {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+}
+
+/* 다크모드 강제 비활성화 */
 body {
   background-color: #ffffff !important;
-  color: #000000 !important; /* 검정색 */
-}
-
-/* 다크모드 스타일 제거 */
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    background-color: #ffffff !important;
-    border-color: #e0e0e0 !important;
-  }
-  
-  .project-card-title {
-    color: #000000 !important;
-  }
-  
-  .project-card-subtitle {
-    color: #777777 !important;
-  }
-  
-  .project-card-list li {
-    color: #000000 !important;
-  }
-  
-  .project-card-list li:before {
-    color: #000000 !important;
-  }
-  
-  h2 {
-    color: #000000 !important;
-  }
+  color: #000000 !important;
 }
 
 /* 모바일 반응형 */
@@ -344,52 +315,30 @@ body {
   .project-card-date {
     margin-left: 0 !important;
     margin-top: 8px !important;
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     align-self: flex-start !important;
   }
   
-  .project-card-title {
-    font-size: 1.6rem !important;
+  .project-title-link {
+    font-size: 1.4rem !important;
   }
   
   .project-card-subtitle {
-    font-size: 1.2rem !important;
+    font-size: 1.1rem !important;
     margin-bottom: 12px !important;
     padding-bottom: 12px !important;
   }
   
   .project-card-list li {
-    font-size: 1.1rem !important;
+    font-size: 1.05rem !important;
   }
   
   h2 {
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
   }
 }
 
-/* GitHub 버튼 스타일 */
+/* GitHub 버튼 스타일 제거 (요청에 따라) */
 .project-github-btn {
-  display: inline-block;
-  margin-top: 25px !important;
-  padding: 10px 20px !important;
-  background-color: #24292e !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  border-radius: 6px !important;
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  transition: background-color 0.2s !important;
-  border: none !important;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-}
-
-.project-github-btn:hover {
-  background-color: #444d56 !important;
-  text-decoration: none !important;
-  color: #ffffff !important;
-}
-
-.project-github-btn i {
-  margin-right: 8px !important;
-  font-size: 1.1rem !important;
+  display: none !important;
 }

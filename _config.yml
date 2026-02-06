@@ -85,7 +85,7 @@ content:
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">LinkFolio - 개발자 포트폴리오 공유 및 채용 플랫폼</div>
+              <a href="https://github.com/HeoJunHyoung/Linkfolio-backend" class="project-title-link" target="_blank">LinkFolio - 개발자 포트폴리오 공유 및 채용 플랫폼</a>
               <div class="project-card-date">2025.10.27 ~ 2025.12.12</div>
             </div>
             <div class="project-card-subtitle">MSA 기반 아키텍처, Kubernetes 환경 구축 및 운영</div>
@@ -96,9 +96,6 @@ content:
                 <li>Redis Split Caching 도입으로 DB Lock 경합 해결 및 응답 시간 78% 단축</li>
                 <li>Kubernetes 로컬 클러스터 구축 및 ArgoCD 기반 GitOps 파이프라인 운영</li>
               </ul>
-              <a href="https://github.com/HeoJunHyoung/Linkfolio-backend" class="project-github-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub에서 보기
-              </a>
             </div>
           </div>
 
@@ -107,7 +104,7 @@ content:
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">GotEEgo - 사용자 맞춤 여행 메이트 추천 플랫폼</div>
+              <a href="https://github.com/heojunhyoung/goteego-backend" class="project-title-link" target="_blank">GotEEgo - 사용자 맞춤 여행 메이트 추천 플랫폼</a>
               <div class="project-card-date">2025.07.16 ~ 2025.08.24</div>
             </div>
             <div class="project-card-subtitle">WebSocket 기반 실시간 채팅 및 여행 일정 관리 서비스</div>
@@ -118,9 +115,6 @@ content:
                 <li>MongoDB 기반 Polyglot Persistence 적용으로 대용량 메시지 처리 최적화</li>
                 <li>Handshake Interceptor로 JWT 인증 이슈 해결</li>
               </ul>
-              <a href="https://github.com/heojunhyoung/goteego-backend" class="project-github-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub에서 보기
-              </a>
             </div>
           </div>
 
@@ -129,7 +123,7 @@ content:
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">Vinyl Groove - 재즈 LP 수집가를 위한 이커머스 플랫폼</div>
+              <a href="https://github.com/HeoJunHyoung/vinyl-groove-backend" class="project-title-link" target="_blank">Vinyl Groove - 재즈 LP 수집가를 위한 이커머스 플랫폼</a>
               <div class="project-card-date">2025.07.07 ~ 2025.07.14</div>
             </div>
             <div class="project-card-subtitle">대용량 트래픽 처리를 위한 분산 락 및 캐싱 전략 적용</div>
@@ -139,9 +133,6 @@ content:
                 <li>Redis Sorted Set 활용 실시간 베스트셀러 랭킹 시스템 구축</li>
                 <li>k6 부하 테스트 기반 DB 커넥션 풀 튜닝으로 병목 개선</li>
               </ul>
-              <a href="https://github.com/HeoJunHyoung/vinyl-groove-backend" class="project-github-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub에서 보기
-              </a>
             </div>
           </div>
 
@@ -150,7 +141,7 @@ content:
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">Secondhand Market - 중고 거래 플랫폼</div>
+              <a href="https://github.com/HeoJunHyoung/secondhand-market/tree/dev" class="project-title-link" target="_blank">Secondhand Market - 중고 거래 플랫폼</a>
               <div class="project-card-date">2026.01.09 ~ 2026.01.24</div>
             </div>
             <div class="project-card-subtitle">데이터 정합성 및 가용성 중심의 성능 최적화 프로젝트</div>
@@ -161,9 +152,6 @@ content:
                 <li>CompletableFuture 기반 멀티스레드로 이미지 업로드 속도 5배 개선</li>
                 <li>Prometheus 기반 비즈니스 모니터링 구축 및 k6 부하 테스트 적용</li>
               </ul>
-              <a href="https://github.com/HeoJunHyoung/secondhand-market/tree/dev" class="project-github-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub에서 보기
-              </a>
             </div>
           </div>
 
