@@ -19,10 +19,11 @@
   color: #555555 !important;        /* 짙은 회색 */
   font-size: 1.3rem !important;
   margin-top: 5px !important;
+  border-bottom: none !important;  /* 혹시 모를 하단 테두리 제거 */
 }
 
 /* =========================================
-   2. Latest Updated (우측 상단 배지 복구) - 요청사항 2번
+   2. Latest Updated (우측 상단) - 요청사항 2번
    ========================================= */
 .icons-wrapper {
   position: relative;
@@ -30,19 +31,28 @@
 
 .last-updated {
   position: absolute;
-  top: -40px;
+  top: -50px; /* 위치 조정 */
   right: 0;
-  font-size: 0.9rem;
-  color: #666;
-  background-color: #f0f0f0;
-  padding: 5px 10px;
-  border-radius: 15px;
+  font-size: 1.1rem; /* 글자 크기 확대 */
+  color: #333; /* 글자색 변경 */
+  background-color: transparent; /* 전체 배경 투명 */
+  padding: 0; /* 패딩 제거 */
   font-weight: 500;
   white-space: nowrap;
 }
 
+/* 날짜 부분만 배경색 적용 */
+.last-updated mark {
+  background-color: #f0f0f0 !important;
+  color: #333 !important;
+  padding: 4px 8px;
+  border-radius: 15px;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 @media (max-width: 768px) {
-  .last-updated { display: none; } /* 모바일에서는 숨김 */
+  .last-updated { display: none; }
 }
 
 /* =========================================
@@ -111,14 +121,14 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
 }
 
 /* =========================================
-   6. Projects 섹션 (카드 스타일)
+   6. Projects 섹션 (카드 스타일) - 요청사항 3, 4, 5번
    ========================================= */
 .project-card {
   background-color: #ffffff !important;
   border: 1px solid #e0e0e0 !important;
   border-radius: 10px !important;
-  padding: 30px !important;
-  margin-bottom: 10px !important; /* 요청사항 6번: 간격 1/3로 축소 (30px -> 10px) */
+  padding: 15px 30px !important; /* 요청사항 5번: 상하 패딩 축소 */
+  margin-bottom: 10px !important;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
 }
 
@@ -130,13 +140,14 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
   flex-wrap: wrap !important;
 }
 
-/* 요청사항 3번: 하이퍼링크 색상 변경 (밝은 파란색) */
+/* 요청사항 3: 하이퍼링크 색상 변경 (파란색) */
+/* 요청사항 4: 제목 글자 크기 확대 (2.2rem) */
 .project-title-link {
   font-weight: 700 !important;
-  color: #1a0dab !important; /* 구글/표준 웹 링크 색상 */
-  font-size: 1.9rem !important;
+  color: #0066cc !important; /* 밝은 파란색 적용 */
+  font-size: 2.2rem !important; /* 글자 크기 대폭 확대 */
   margin: 0 !important;
-  line-height: 1.3 !important;
+  line-height: 1.2 !important;
   flex: 1 !important;
   min-width: 300px !important;
   text-decoration: none !important;
@@ -144,11 +155,12 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
 
 .project-title-link:hover {
   text-decoration: underline !important;
-  color: #0000FF !important;
+  color: #004499 !important;
 }
 
+/* 요청사항 4: 날짜 크기 확대 */
 .project-card-date {
-  font-size: 1rem !important;
+  font-size: 1.3rem !important; /* 글자 크기 확대 */
   color: #666 !important;
   white-space: nowrap !important;
   margin-left: 20px !important;
@@ -158,19 +170,19 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
   border: 1px solid #eee !important;
 }
 
-/* 요청사항 4번: 서브타이틀 이탤릭체, 회색, 볼드 해제 */
+/* 요청사항 4: 서브타이틀 크기 확대 (1.6rem) */
 .project-card-subtitle {
-  color: #777777 !important;         /* 회색 */
-  margin: 5px 0 20px 0 !important;
-  font-size: 1.25rem !important;
-  font-weight: 400 !important;       /* Bold 해제 */
-  font-style: italic !important;     /* 이탤릭체 */
+  color: #777777 !important;
+  margin: 5px 0 15px 0 !important;
+  font-size: 1.6rem !important; /* 글자 크기 확대 */
+  font-weight: 400 !important;
+  font-style: italic !important;
   line-height: 1.5 !important;
-  padding-bottom: 15px !important;
+  padding-bottom: 10px !important;
   border-bottom: 1px solid #f0f0f0 !important;
 }
 
-.project-card-content { margin-top: 15px !important; }
+.project-card-content { margin-top: 10px !important; }
 
 .project-card-list {
   margin: 0 !important;
@@ -178,13 +190,13 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
   list-style-type: none !important;
 }
 
-/* 요청사항 5번: 프로젝트 설명 글자 크기 확대 (Skills와 동일하게) */
+/* 요청사항 4: 프로젝트 설명 글자 크기 대폭 확대 (1.8rem) */
 .project-card-list li {
-  margin-bottom: 10px !important;
-  font-size: 1.2rem !important;     /* Skills description과 동일한 크기 */
+  margin-bottom: 8px !important;
+  font-size: 1.8rem !important; /* Skills description(1.2rem)보다 훨씬 크게 설정 */
   color: #333 !important;
   line-height: 1.6 !important;
-  padding-left: 20px !important;
+  padding-left: 25px !important;
   position: relative !important;
 }
 
@@ -192,7 +204,7 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
   content: "•" !important;
   color: #444 !important;
   font-weight: bold !important;
-  font-size: 1.2rem !important;
+  font-size: 1.8rem !important; /* 불렛 크기도 맞춰서 확대 */
   position: absolute !important;
   left: 0 !important;
   top: 0px !important;
@@ -216,9 +228,8 @@ h2 {
   font-weight: 700 !important;
 }
 
-/* Skills description 크기 설정 */
 .content .list__item__description {
-  font-size: 1.2rem !important;  /* 프로젝트 설명과 동일하게 맞춤 */
+  font-size: 1.2rem !important;
   line-height: 1.6 !important;
   color: #333 !important;
 }
@@ -239,8 +250,9 @@ body {
 
 @media (max-width: 768px) {
   .project-card { padding: 20px 15px !important; }
-  .project-title-link { font-size: 1.5rem !important; }
+  .project-title-link { font-size: 1.8rem !important; }
   .project-card-date { margin-left: 0 !important; margin-top: 10px !important; display: inline-block !important; }
+  .project-card-list li { font-size: 1.4rem !important; }
   h2 { font-size: 1.8rem !important; }
 }
 
