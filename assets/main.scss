@@ -108,3 +108,33 @@ a:hover .fa-tistory-custom {
     font-size: 2.8rem !important;
   }
 }
+
+
+
+
+
+
+
+.last-updated {
+  position: fixed;        /* 화면 기준 */
+  top: 12px;
+  right: 24px;
+
+  font-size: 0.75rem;
+  color: #777;
+  opacity: 0.85;
+  z-index: 2000;          /* header 아이콘보다 위 */
+
+  mark {
+    background: none;
+    color: #111;
+    font-weight: 600;
+  }
+}
+
+/* 모바일에서는 숨기기 (선택) */
+@media (max-width: 768px) {
+  .last-updated {
+    display: none;
+  }
+}
