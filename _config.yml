@@ -18,7 +18,7 @@ additional_links:
     icon: fas fa-envelope
     url: mailto:junhyoung.heo@gmail.com
   - title: Blog
-    icon: fas fa-blog
+    icon: fa fa-tistory-custom
     url: https://receiver40.tistory.com/
 
 # About Section
