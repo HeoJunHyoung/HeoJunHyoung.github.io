@@ -45,27 +45,23 @@ content:
   - title: Skills
     layout: list
     content:
-      - layout: right  # left → right 변경
-        offset: 1      # 오른쪽으로 1칸 이동
+      - layout: left
         title: Backend
         description: |
           * **Java**, **Spring Boot**, Spring MVC
           * JPA, QueryDSL, WebSocket, STOMP
           * **Kafka**, **Debezium (CDC)**
-      - layout: right
-        offset: 1
+      - layout: left
         title: Database
         description: |
           * **MySQL**, **PostgreSQL**, **Redis**, **MongoDB**
-      - layout: right
-        offset: 1
+      - layout: left
         title: Infrastructure & DevOps
         description: |
           * **Docker**, **Kubernetes** (EKS, Local Cluster)
           * **AWS** (EC2, RDS, S3, ElastiCache, ALB)
           * **GitHub Actions**, **ArgoCD** (GitOps)
-      - layout: right
-        offset: 1
+      - layout: left
         title: Observability & Testing
         description: |
           * **Prometheus**, **Grafana**, **Micrometer**
