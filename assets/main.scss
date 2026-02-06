@@ -117,24 +117,27 @@ a:hover .fa-tistory-custom {
   position: relative; /* last-updated 기준점 */
 }
 
-/* 아이콘 바로 위 */
+
 .last-updated {
   position: absolute;
-  top: -26px;          /* 아이콘 위 간격 */
+  top: -30px;
   right: 0;
 
-  font-size: 0.9rem;   /* 기존보다 살짝 키움 */
-  color: #999;         /* 밝은 그레이 */
-  opacity: 0.9;
-  letter-spacing: 0.3px;
+  font-size: 1.05rem;      /* 👈 확실히 키움 */
+  font-weight: 500;        /* 👈 흐릿함 제거 */
+  color: #666;             /* 👈 너무 연하지 않게 */
+  opacity: 1;              /* 👈 흐림 제거 */
+  letter-spacing: 0.2px;
   white-space: nowrap;
 }
 
 /* 날짜 강조 */
 .last-updated mark {
-  background: none;
-  color: #777;
-  font-weight: 500;
+  background-color: #e0e0e0 !important;  /* 👈 강제 */
+  color: #333 !important;                /* 👈 가독성 */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
 /* 모바일에서는 숨김 (선택) */
