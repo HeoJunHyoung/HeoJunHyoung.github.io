@@ -113,26 +113,31 @@ a:hover .fa-tistory-custom {
 
 
 
-
-
-.last-updated {
-  position: fixed;        /* 화면 기준 */
-  top: 12px;
-  right: 24px;
-
-  font-size: 0.75rem;
-  color: #777;
-  opacity: 0.85;
-  z-index: 2000;          /* header 아이콘보다 위 */
-
-  mark {
-    background: none;
-    color: #111;
-    font-weight: 600;
-  }
+.icons-wrapper {
+  position: relative; /* last-updated 기준점 */
 }
 
-/* 모바일에서는 숨기기 (선택) */
+/* 아이콘 바로 위 */
+.last-updated {
+  position: absolute;
+  top: -26px;          /* 아이콘 위 간격 */
+  right: 0;
+
+  font-size: 0.9rem;   /* 기존보다 살짝 키움 */
+  color: #999;         /* 밝은 그레이 */
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* 날짜 강조 */
+.last-updated mark {
+  background: none;
+  color: #777;
+  font-weight: 500;
+}
+
+/* 모바일에서는 숨김 (선택) */
 @media (max-width: 768px) {
   .last-updated {
     display: none;

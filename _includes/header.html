@@ -5,6 +5,14 @@
       <h2>{{ site.title | escape }}</h2>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 header-right">
+
+      <!-- 🔽 추가: 아이콘 기준 래퍼 -->
+      <div class="icons-wrapper">
+        <!-- 🔽 추가: last updated -->
+        <div class="last-updated">
+          Latest Updated: <mark>2026.02.06</mark>
+        </div>
+
       <ul class="icons no-print">
         {%- if site.dribbble_username -%}
           <li>
@@ -105,6 +113,8 @@
           </li>
         {% endfor %}
       </ul>
+
+      </div>
 
       {%- if site.email -%}
         <p>
