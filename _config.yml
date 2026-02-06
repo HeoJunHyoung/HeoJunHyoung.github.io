@@ -55,8 +55,8 @@ content:
         title: Backend
         description: |
           * Java, Python
-          * Spring Boot, Spring Cloud, Spring MVC, Spring Batch, Spring Security
-          * JPA (Hibernate), QueryDSL, Spring Data JPA/Redis
+          * Spring Boot, Spring MVC, Spring Batch, Spring Security, Spring Data JPA/Redis, Spring Cloud AWS
+          * JPA, Querydsl, Hibernate
           * Kafka, Debezium (CDC)
       - layout: left
         title: Database
@@ -64,17 +64,17 @@ content:
           * MySQL, PostgreSQL
           * Redis, MongoDB
       - layout: left
-        title: Infrastructure & DevOps
+        title: Infra & DevOps
         description: |
           * Docker, Kubernetes (EKS, Local Cluster)
           * EC2, RDS, S3, ElastiCache, ALB, Route53
           * GitHub Actions, ArgoCD (GitOps)
       - layout: left
-        title: Observability & Testing
+        title: Test & Monitoring
         description: |
+          * JUnit5, Mockito, Testcontainers, k6 (Load Testing)
           * Prometheus, Grafana, Micrometer
-          * k6 (Load Testing), Testcontainers, JUnit5, Mockito
-          * Swagger (SpringDoc)
+          * Swagger
 
   - title: Projects
     layout: list
