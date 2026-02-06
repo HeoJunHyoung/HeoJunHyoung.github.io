@@ -43,46 +43,20 @@ a:hover .fa-tistory-custom {
 
 
 
-// /* Skills 상세 리스트만 오른쪽으로 살짝 이동 */
-// .content-container .item-content ul {
-//   margin-left: 1.2rem;
-// }
 
-/* Skills 섹션 레이아웃 교정 및 간격 조정 */
-.list-item.left {
-  display: flex !important;
-  flex-direction: row-reverse !important; /* 제목을 왼쪽, 내용을 오른쪽으로 배치 */
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-bottom: 1.5rem;
+
+
+
+
+
+/* 모든 description 영역을 중앙 정렬 */
+.list-item-content {
+  text-align: center !important;
 }
 
-/* 왼쪽 제목(Backend, Database 등) 설정 */
-.list-item.left .list-item-title {
-  flex: 0 0 220px; /* 제목의 너비를 고정하여 정렬 기준 생성 */
-  text-align: left !important;
-  margin: 0 !important;
-  font-weight: bold;
-}
-
-/* 오른쪽 상세 내용(기술 스택 리스트) 설정 */
-.list-item.left .list-item-content {
-  flex: 1;
-  padding-left: 40px; /* 상세 내용을 오른쪽으로 더 이동시킴 */
-  text-align: left;
-}
-
-/* 모바일 환경 고려 (화면이 좁아질 경우 세로 정렬) */
-@media (max-width: 768px) {
-  .list-item.left {
-    flex-direction: column !important;
-  }
-  .list-item.left .list-item-title {
-    flex: 0 0 auto;
-    width: 100%;
-    margin-bottom: 0.5rem !important;
-  }
-  .list-item.left .list-item-content {
-    padding-left: 0;
-  }
+/* description 내부에 리스트(bullet points)가 있을 경우 */
+/* 불렛 포인트를 수직 정렬된 상태로 중앙에 배치하기 위한 설정 */
+.list-item-content ul {
+  display: inline-block;
+  text-align: left; /* 불렛 포인트 사이의 정렬은 왼쪽으로 유지 */
 }
