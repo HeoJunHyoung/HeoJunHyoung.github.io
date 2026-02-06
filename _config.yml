@@ -77,47 +77,93 @@ content:
           * Swagger
 
 
+
   - title: Projects
     layout: list
     content:
-    - layout: top-middle
-      title: LinkFolio (Team Project)
-      sub_title: 개발자 포트폴리오 공유 및 채용 플랫폼 (MSA 기반)
-      caption: 2025.10.27 ~ 2025.12.12
-      description: |
+      - title: LinkFolio (Team Project)
+        layout: top-middle
+        card_style: true
+        caption: 2025.10.27 ~ 2025.12.12
+        description: |
+          개발자 포트폴리오 공유 및 채용 플랫폼 (MSA 기반)
           * Kafka & Debezium 기반 Event-Driven Architecture 설계로 실시간 데이터 동기화 구현
           * Transactional Outbox 기반 SAGA 패턴으로 분산 트랜잭션 정합성 보장
           * Redis Split Caching 도입으로 DB Lock 경합 해결 및 응답 시간 78% 단축
           * Kubernetes 로컬 클러스터 구축 및 ArgoCD 기반 GitOps 파이프라인 운영
 
-    - layout: top-middle
-      title: GotEEgo (Team Project)
-      sub_title: 사용자 맞춤 여행 메이트 추천 플랫폼
-      caption: 2025.07.16 ~ 2025.08.24
-      description: |
+      - title: GotEEgo (Team Project)
+        layout: top-middle
+        card_style: true
+        caption: 2025.07.16 ~ 2025.08.24
+        description: |
+          사용자 맞춤 여행 메이트 추천 플랫폼
           * WebSocket & STOMP 기반 실시간 채팅 시스템 구현
           * Redis Pub/Sub 도입으로 다중 서버 환경 메시지 동기화
           * MongoDB 기반 Polyglot Persistence 적용으로 대용량 메시지 처리 최적화
           * Handshake Interceptor로 JWT 인증 이슈 해결
 
-    - layout: top-middle
-      title: Vinyl Groove (Team Project)
-      sub_title: 재즈 LP 이커머스 플랫폼
-      caption: 2025.07.07 ~ 2025.07.14
-      description: |
+      - title: Vinyl Groove (Team Project)
+        layout: top-middle
+        card_style: true
+        caption: 2025.07.07 ~ 2025.07.14
+        description: |
+          재즈 LP 이커머스 플랫폼
           * Redisson 분산 락 적용으로 대량 주문 시 재고 갱신 손실 방지
           * Redis Sorted Set 활용 실시간 베스트셀러 랭킹 시스템 구축
           * k6 부하 테스트 기반 DB 커넥션 풀 튜닝으로 병목 개선
 
-    - layout: top-middle
-      title: Secondhand-market (Personal Project)
-      sub_title: 데이터 정합성 및 가용성 중심의 성능 최적화 중고 거래 플랫폼
-      caption: 2026.01.09 ~ 2026.01.24
-      description: |
+      - title: Secondhand-market (Personal Project)
+        layout: top-middle
+        card_style: true
+        caption: 2026.01.09 ~ 2026.01.24
+        description: |
+          데이터 정합성 및 가용성 중심의 성능 최적화 중고 거래 플랫폼
           * MySQL FullText Index 도입으로 검색 성능 55배 개선 (4.9s → 0.08s)
           * Redis 캐싱 및 Null Object Pattern 적용으로 조회 성능 3.5배 향상
           * CompletableFuture 기반 멀티스레드로 이미지 업로드 속도 5배 개선
           * Prometheus 기반 비즈니스 모니터링 구축 및 k6 부하 테스트 적용
+  # - title: Projects
+  #   layout: list
+  #   content:
+  #   - layout: top-middle
+  #     title: LinkFolio (Team Project)
+  #     sub_title: 개발자 포트폴리오 공유 및 채용 플랫폼 (MSA 기반)
+  #     caption: 2025.10.27 ~ 2025.12.12
+  #     description: |
+  #         * Kafka & Debezium 기반 Event-Driven Architecture 설계로 실시간 데이터 동기화 구현
+  #         * Transactional Outbox 기반 SAGA 패턴으로 분산 트랜잭션 정합성 보장
+  #         * Redis Split Caching 도입으로 DB Lock 경합 해결 및 응답 시간 78% 단축
+  #         * Kubernetes 로컬 클러스터 구축 및 ArgoCD 기반 GitOps 파이프라인 운영
+
+  #   - layout: top-middle
+  #     title: GotEEgo (Team Project)
+  #     sub_title: 사용자 맞춤 여행 메이트 추천 플랫폼
+  #     caption: 2025.07.16 ~ 2025.08.24
+  #     description: |
+  #         * WebSocket & STOMP 기반 실시간 채팅 시스템 구현
+  #         * Redis Pub/Sub 도입으로 다중 서버 환경 메시지 동기화
+  #         * MongoDB 기반 Polyglot Persistence 적용으로 대용량 메시지 처리 최적화
+  #         * Handshake Interceptor로 JWT 인증 이슈 해결
+
+  #   - layout: top-middle
+  #     title: Vinyl Groove (Team Project)
+  #     sub_title: 재즈 LP 이커머스 플랫폼
+  #     caption: 2025.07.07 ~ 2025.07.14
+  #     description: |
+  #         * Redisson 분산 락 적용으로 대량 주문 시 재고 갱신 손실 방지
+  #         * Redis Sorted Set 활용 실시간 베스트셀러 랭킹 시스템 구축
+  #         * k6 부하 테스트 기반 DB 커넥션 풀 튜닝으로 병목 개선
+
+  #   - layout: top-middle
+  #     title: Secondhand-market (Personal Project)
+  #     sub_title: 데이터 정합성 및 가용성 중심의 성능 최적화 중고 거래 플랫폼
+  #     caption: 2026.01.09 ~ 2026.01.24
+  #     description: |
+  #         * MySQL FullText Index 도입으로 검색 성능 55배 개선 (4.9s → 0.08s)
+  #         * Redis 캐싱 및 Null Object Pattern 적용으로 조회 성능 3.5배 향상
+  #         * CompletableFuture 기반 멀티스레드로 이미지 업로드 속도 5배 개선
+  #         * Prometheus 기반 비즈니스 모니터링 구축 및 k6 부하 테스트 적용
 
 
   - title: Education
