@@ -28,11 +28,9 @@ additional_links:
 about_profile_image: images/profile.png
 about_content: |
   <div class="slogan-container">
-    <span class="quote-mark">"</span>
-      <span class="slogan-text">
-      데이터와 지표로 시스템의 신뢰성을 증명하는 백엔드 개발자
-      </span>
-    <span class="quote-mark">"</span>
+    <span class="quote-mark">“</span>
+      <span class="slogan-text">데이터와 지표로 시스템의 신뢰성을 증명하는 백엔드 개발자</span>
+    <span class="quote-mark">”</span>
   </div>
 
   기술적 선택이 비즈니스 가치로 이어지기 위해서는 객관적인 근거가 필요하다고 믿으며, 프로젝트 전반에서 **지표 기반의 의사결정**을 중심으로 개발해 왔습니다.
