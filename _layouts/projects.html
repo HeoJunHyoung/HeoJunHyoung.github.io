@@ -1,0 +1,20 @@
+<section id="projects">
+  <h3>Projects</h3>
+  {% for project in site.data.projects %}
+    <div class="project-card">
+      <div class="project-header">
+        <h4 class="project-title">{{ project.title }}{% if project.sub_title %} - {{ project.sub_title }}{% endif %}</h4>
+        <span class="project-period">{{ project.caption }}</span>
+      </div>
+      <div class="project-details">
+        <ul>
+          {% for line in project.description | split: "\n" %}
+            {% if line != "" %}
+              <li>{{ line | remove: "*" | strip }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  {% endfor %}
+</section>
