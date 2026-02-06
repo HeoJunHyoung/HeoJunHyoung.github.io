@@ -288,19 +288,21 @@ content:
           * Prometheus, Grafana, Micrometer
           * Swagger
 
+
+
   - title: Projects
     layout: list
     content:
       - layout: top-middle
-        title: LinkFolio (Team Project)
+        title: ""
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">LinkFolio (Team Project)</div>
+              <div class="project-card-title">LinkFolio - 개발자 포트폴리오 공유 및 채용 플랫폼</div>
               <div class="project-card-date">2025.10.27 ~ 2025.12.12</div>
             </div>
+            <div class="project-card-subtitle">MSA 기반 아키텍처, Kubernetes 환경 구축 및 운영</div>
             <div class="project-card-content">
-              개발자 포트폴리오 공유 및 채용 플랫폼 (MSA 기반)
               <ul class="project-card-list">
                 <li>Kafka & Debezium 기반 Event-Driven Architecture 설계로 실시간 데이터 동기화 구현</li>
                 <li>Transactional Outbox 기반 SAGA 패턴으로 분산 트랜잭션 정합성 보장</li>
@@ -311,15 +313,15 @@ content:
           </div>
 
       - layout: top-middle
-        title: GotEEgo (Team Project)
+        title: ""
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">GotEEgo (Team Project)</div>
+              <div class="project-card-title">GotEEgo - 사용자 맞춤 여행 메이트 추천 플랫폼</div>
               <div class="project-card-date">2025.07.16 ~ 2025.08.24</div>
             </div>
+            <div class="project-card-subtitle">WebSocket 기반 실시간 채팅 및 여행 일정 관리 서비스</div>
             <div class="project-card-content">
-              사용자 맞춤 여행 메이트 추천 플랫폼
               <ul class="project-card-list">
                 <li>WebSocket & STOMP 기반 실시간 채팅 시스템 구현</li>
                 <li>Redis Pub/Sub 도입으로 다중 서버 환경 메시지 동기화</li>
@@ -330,15 +332,15 @@ content:
           </div>
 
       - layout: top-middle
-        title: Vinyl Groove (Team Project)
+        title: ""
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">Vinyl Groove (Team Project)</div>
+              <div class="project-card-title">Vinyl Groove - 재즈 LP 수집가를 위한 이커머스 플랫폼</div>
               <div class="project-card-date">2025.07.07 ~ 2025.07.14</div>
             </div>
+            <div class="project-card-subtitle">대용량 트래픽 처리를 위한 분산 락 및 캐싱 전략 적용</div>
             <div class="project-card-content">
-              재즈 LP 이커머스 플랫폼
               <ul class="project-card-list">
                 <li>Redisson 분산 락 적용으로 대량 주문 시 재고 갱신 손실 방지</li>
                 <li>Redis Sorted Set 활용 실시간 베스트셀러 랭킹 시스템 구축</li>
@@ -348,15 +350,15 @@ content:
           </div>
 
       - layout: top-middle
-        title: Secondhand-market (Personal Project)
+        title: ""
         description: |
           <div class="project-card">
             <div class="project-card-header">
-              <div class="project-card-title">Secondhand-market (Personal Project)</div>
+              <div class="project-card-title">Secondhand Market - 중고 거래 플랫폼</div>
               <div class="project-card-date">2026.01.09 ~ 2026.01.24</div>
             </div>
+            <div class="project-card-subtitle">데이터 정합성 및 가용성 중심의 성능 최적화 프로젝트</div>
             <div class="project-card-content">
-              데이터 정합성 및 가용성 중심의 성능 최적화 중고 거래 플랫폼
               <ul class="project-card-list">
                 <li>MySQL FullText Index 도입으로 검색 성능 55배 개선 (4.9s → 0.08s)</li>
                 <li>Redis 캐싱 및 Null Object Pattern 적용으로 조회 성능 3.5배 향상</li>
@@ -365,6 +367,8 @@ content:
               </ul>
             </div>
           </div>
+
+
 
   - title: Education
     layout: list
@@ -384,6 +388,8 @@ content:
           * Spring Boot, JPA 기반 백엔드 개발
           * Docker, Kubernetes, AWS를 활용한 클라우드 인프라 구축
           * GitOps 및 CI/CD 파이프라인 실무 경험
+
+
 
   - title: ETC
     layout: list
