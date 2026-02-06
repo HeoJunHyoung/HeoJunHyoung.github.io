@@ -49,3 +49,40 @@ a:hover .fa-tistory-custom {
 
 
 
+/* 전체 섹션의 좌측 기본 여백 확보 */
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* left 레이아웃에서 타이틀(Backend 등)과 설명 사이의 간격 넓히기 */
+.left-layout {
+  display: flex;
+  margin-bottom: 1.5rem;
+
+  .left-layout-title {
+    flex: 0 0 30%; /* 타이틀 영역을 전체의 30%로 고정하여 오른쪽으로 밀기 */
+    padding-right: 40px; /* 타이틀과 본문 사이 간격 확보 */
+    font-weight: bold;
+  }
+
+  .left-layout-content {
+    flex: 1;
+    /* 리스트 항목들이 너무 왼쪽으로 붙지 않게 조정 */
+    ul {
+      padding-left: 20px; 
+    }
+  }
+}
+
+/* 모바일 대응: 화면이 작아지면 다시 세로로 배치 */
+@media (max-width: 768px) {
+  .left-layout {
+    flex-direction: column;
+    .left-layout-title {
+      flex: 0 0 100%;
+      padding-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
