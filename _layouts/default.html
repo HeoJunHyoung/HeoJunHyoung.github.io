@@ -8,14 +8,6 @@
   {%- include header.html -%}
 
   <main class="page-content" aria-label="Content">
-    
-    <!-- Latest Updated (Top Right) -->
-    {% if site.last_updated %}
-      <div class="last-updated">
-        Latest Updated: <mark>{{ site.last_updated }}</mark>
-      </div>
-    {% endif %}
-
     <div class="wrapper">
 
       {%- if jekyll.environment == 'production' and site.gtm -%}
