@@ -60,3 +60,35 @@ a:hover .fa-tistory-custom {
   display: inline-block;
   text-align: left; /* 불렛 포인트 사이의 정렬은 왼쪽으로 유지 */
 }
+
+
+
+
+
+
+
+
+/* 슬로건 컨테이너 설정 */
+.slogan-container {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: block;
+  font-size: 1.2rem; /* 슬로건 글자 크기 조정 */
+}
+
+/* 큰 쌍따옴표 스타일 */
+.quote-mark {
+  font-family: "Georgia", serif; /* 따옴표 전용 폰트 */
+  font-size: 3rem;              /* 따옴표 크기 (노션처럼 크게) */
+  color: #ccc;                 /* 따옴표 색상 (연한 회색) */
+  line-height: 0;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 10px;              /* 글자와의 간격 */
+}
+
+/* 여백 조정을 위한 특별 관리 (선택 사항) */
+.slogan-container .quote-mark:first-child {
+  vertical-align: sub;        /* 여는 따옴표 위치 미세 조정 */
+}
