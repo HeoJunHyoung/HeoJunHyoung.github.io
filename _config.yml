@@ -45,28 +45,26 @@ content:
   - title: Skills
     layout: list
     content:
+      # layout을 'left'로 설정하면 제목은 왼쪽, description은 오른쪽에 배치된다.
       - layout: left
         title: Backend
         description: |
-          * **Java**, **Spring Boot**, Spring MVC
-          * JPA, QueryDSL, WebSocket, STOMP
-          * **Kafka**, **Debezium (CDC)**
+          **Java**, **Spring Boot**, Spring MVC, JPA, QueryDSL, WebSocket, STOMP, **Kafka**, **Debezium (CDC)**
+      
       - layout: left
         title: Database
         description: |
-          * **MySQL**, **PostgreSQL**, **Redis**, **MongoDB**
+          **MySQL**, **PostgreSQL**, **Redis**, **MongoDB**
+      
       - layout: left
-        title: Infrastructure & DevOps
+        title: Infrastructure
         description: |
-          * **Docker**, **Kubernetes** (EKS, Local Cluster)
-          * **AWS** (EC2, RDS, S3, ElastiCache, ALB)
-          * **GitHub Actions**, **ArgoCD** (GitOps)
+          **Docker**, **Kubernetes** (EKS, Local Cluster), **AWS** (EC2, RDS, S3, ElastiCache, ALB), **GitHub Actions**, **ArgoCD** (GitOps)
+      
       - layout: left
-        title: Observability & Testing
+        title: Observability
         description: |
-          * **Prometheus**, **Grafana**, **Micrometer**
-          * **k6** (Load Testing), **Testcontainers**
-          * **Swagger** (SpringDoc)
+          **Prometheus**, **Grafana**, **Micrometer**, **k6** (Load Testing), **Testcontainers**, **Swagger** (SpringDoc)
 
   - title: Projects
     layout: list
