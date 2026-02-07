@@ -151,7 +151,7 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
 /* 요청사항 3: 하이퍼링크 색상 변경 (파란색) */
 /* 요청사항 4: 제목 글자 크기 확대 (2.2rem) */
 .project-title-link {
-  font-weight: 700 !important;
+  font-weight: 400 !important;
   color: #007bff !important; /* 밝은 파란색 적용 */
   font-size: 2.2rem !important; /* 글자 크기 대폭 확대 */
   margin: 0 !important;
@@ -173,7 +173,7 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
   white-space: nowrap !important;
   margin-left: 20px !important;
   padding: 4px 10px !important;
-  background-color: #f9f9f9 !important;
+  // background-color: #f9f9f9 !important;
   border-radius: 6px !important;
   border: 1px solid #eee !important;
 }
@@ -182,7 +182,7 @@ a:hover .fa-tistory-custom { background-image: url('https://heojunhyoung.github.
 .project-card-subtitle {
   color: #777777 !important;
   margin: 5px 0 15px 0 !important;
-  font-size: 1.8rem !important; /* 글자 크기 확대 */
+  font-size: 1.6rem !important; /* 글자 크기 확대 */
   font-weight: 400 !important;
   font-style: italic !important;
   line-height: 1.5 !important;
