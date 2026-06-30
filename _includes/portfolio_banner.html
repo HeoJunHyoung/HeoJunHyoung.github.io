@@ -1,21 +1,40 @@
 <div class="container portfolio-banner-container no-print">
   <div class="portfolio-banner">
+    <!-- 왼쪽: PDF 아이콘 -->
     <div class="pb-left">
       <img src="{{ '/images/pdf-icon.png' | relative_url }}" alt="PDF Icon" class="pb-pdf-img">
     </div>
 
+    <!-- 중앙: 슬라이드 뷰어 -->
     <div class="pb-center">
-      <div class="pb-badge"><i class="fas fa-file-pdf"></i> PDF RESUME</div>
-      <h2 class="pb-title">포트폴리오 보러가기</h2>
-      <p class="pb-subtitle">프로젝트 경험, 기술 스택, 성과 과정을 한눈에 확인해보세요.</p>
+      <div class="pb-badge"><i class="fas fa-images"></i> PORTFOLIO SLIDE</div>
+      <h2 class="pb-title">포트폴리오 둘러보기</h2>
+      <p class="pb-subtitle">← → 방향키로 넘기며 프로젝트를 확인해보세요</p>
       
-      <a href="https://drive.google.com/file/d/1fX-grOJ0y5htdaxib1m4l9GotuyjED8z/view?usp=drive_link" target="_blank" class="pb-button">
-        <i class="fas fa-download"></i> 포트폴리오 PDF 열기
+      <!-- 슬라이드 이미지 -->
+      <div class="slide-viewer">
+        <img id="banner-slide" src="" alt="포트폴리오 슬라이드">
+        
+        <!-- 슬라이드 컨트롤 -->
+        <div class="slide-controls-banner">
+          <button onclick="bannerPrev()" id="banner-prev">◀</button>
+          <span id="banner-counter">1 / 0</span>
+          <button onclick="bannerNext()" id="banner-next">▶</button>
+        </div>
+        
+        <!-- 하단 점 네비게이션 -->
+        <div class="banner-dots" id="banner-dots"></div>
+      </div>
+      
+      <!-- 전체보기 링크 -->
+      <a href="{{ '/portfolio/' | relative_url }}" class="pb-button" target="_blank">
+        <i class="fas fa-expand"></i> 전체 화면으로 보기
       </a>
       
-      <p class="pb-note">새 탭에서 PDF가 열립니다.</p>
+      <p class="pb-note">클릭하면 새 탭에서 전체 슬라이드를 볼 수 있습니다</p>
     </div>
 
+    <!-- 오른쪽: 체크리스트 -->
     <div class="pb-right">
       <ul class="pb-checklist">
         <li><i class="far fa-check-circle"></i> 프로젝트 상세 경험</li>
@@ -26,3 +45,110 @@
     </div>
   </div>
 </div>
+
+<!-- 슬라이드 자바스크립트 -->
+<script>
+// ============================================================
+// ⚠️ 여기만 수정하세요 - PDF 페이지 개수
+// ============================================================
+const BANNER_TOTAL_SLIDES = 12;  // 🔥 PDF 페이지 개수로 변경!
+const BANNER_IMAGE_PATH = '/images/portfolio/slide-';
+const BANNER_IMAGE_EXT = '.jpg';
+// ============================================================
+
+let bannerCurrent = 1;
+
+function showBannerSlide(num) {
+  const img = document.getElementById('banner-slide');
+  const paddedNum = String(num).padStart(2, '0');
+  img.src = `${BANNER_IMAGE_PATH}${paddedNum}${BANNER_IMAGE_EXT}`;
+  
+  document.getElementById('banner-counter').textContent = `${num} / ${BANNER_TOTAL_SLIDES}`;
+  
+  document.getElementById('banner-prev').disabled = (num === 1);
+  document.getElementById('banner-next').disabled = (num === BANNER_TOTAL_SLIDES);
+  
+  // 점 활성화
+  document.querySelectorAll('.banner-dot').forEach((dot, index) => {
+    dot.classList.toggle('active', index + 1 === num);
+  });
+  
+  bannerCurrent = num;
+}
+
+function bannerNext() {
+  if (bannerCurrent < BANNER_TOTAL_SLIDES) {
+    showBannerSlide(bannerCurrent + 1);
+  }
+}
+
+function bannerPrev() {
+  if (bannerCurrent > 1) {
+    showBannerSlide(bannerCurrent - 1);
+  }
+}
+
+function goToBannerSlide(num) {
+  if (num >= 1 && num <= BANNER_TOTAL_SLIDES) {
+    showBannerSlide(num);
+  }
+}
+
+// 점 네비게이션 생성
+function createBannerDots() {
+  const container = document.getElementById('banner-dots');
+  container.innerHTML = '';
+  for (let i = 1; i <= BANNER_TOTAL_SLIDES; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'banner-dot';
+    dot.onclick = () => goToBannerSlide(i);
+    container.appendChild(dot);
+  }
+}
+
+// 키보드 이벤트 (배너 영역에서만 동작)
+document.addEventListener('keydown', function(e) {
+  const banner = document.querySelector('.portfolio-banner');
+  if (!banner) return;
+  
+  // 배너가 화면에 보일 때만 동작
+  const rect = banner.getBoundingClientRect();
+  const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+  
+  if (isVisible) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      bannerNext();
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      bannerPrev();
+    }
+  }
+});
+
+// 자동 슬라이드 (선택사항 - 3초마다)
+let autoSlideInterval;
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => {
+    if (bannerCurrent < BANNER_TOTAL_SLIDES) {
+      bannerNext();
+    } else {
+      showBannerSlide(1); // 마지막 페이지면 처음으로
+    }
+  }, 3000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+// 마우스 오버 시 자동 슬라이드 멈춤
+document.querySelector('.slide-viewer')?.addEventListener('mouseenter', stopAutoSlide);
+document.querySelector('.slide-viewer')?.addEventListener('mouseleave', startAutoSlide);
+
+// 초기화
+createBannerDots();
+showBannerSlide(1);
+startAutoSlide(); // 자동 슬라이드 시작 (원하지 않으면 주석 처리)
+</script>
