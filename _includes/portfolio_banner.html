@@ -1,4 +1,4 @@
-<div class="container portfolio-banner-container no-print">
+<!-- <div class="container portfolio-banner-container no-print">
   <div class="portfolio-banner">
     <div class="pb-left">
       <img src="{{ '/images/pdf-icon.png' | relative_url }}" alt="PDF Icon" class="pb-pdf-img">
@@ -21,5 +21,40 @@
         <li><i class="far fa-check-circle"></i> 실무 트러블 슈팅 사례</li>
       </ul>
     </div>
+  </div>
+</div> -->
+<div class="container portfolio-banner-container no-print">
+  <div class="portfolio-banner">
+
+    <!-- 왼쪽 : 포트폴리오 썸네일 -->
+    <div class="pb-preview">
+
+      <img src="{{ '/images/portfolio_thumnail(1).png' | relative_url }}"
+           alt="Portfolio Cover">
+
+      <img src="{{ '/images/portfolio_thumnail(2).png' | relative_url }}"
+           alt="Architecture">
+
+    </div>
+
+    <!-- 오른쪽 -->
+    <div class="pb-info">
+
+      <ul class="pb-checklist">
+        <li><i class="fas fa-check-circle"></i> 프로젝트 상세 경험</li>
+        <li><i class="fas fa-check-circle"></i> 아키텍처 의사결정</li>
+        <li><i class="fas fa-check-circle"></i> 성과 및 성능 개선 사례</li>
+        <li><i class="fas fa-check-circle"></i> 실무 트러블 슈팅 사례</li>
+      </ul>
+
+      <a href="{{ '/assets/pdf/Portfolio.pdf' | relative_url }}"
+         target="_blank"
+         class="pb-button">
+        포트폴리오 PDF 열기
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+
+    </div>
+
   </div>
 </div>

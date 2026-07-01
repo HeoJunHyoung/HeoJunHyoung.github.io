@@ -285,176 +285,220 @@ body {
 
 
 
-
-
 /* =========================================
-   9. Portfolio Banner (포트폴리오 보러가기)
+   Portfolio Banner
    ========================================= */
+
 .portfolio-banner-container {
-  /* 1. 간격 축소: 윗쪽 여백을 없애거나 줄여서 헤더 바로 아래에 붙입니다. */
-  /* 더 바짝 붙이고 싶다면 -10px, -20px 처럼 음수(-) 값을 넣으시면 됩니다. */
-  margin-top: 0px !important; 
-  
-  /* About Me 섹션과의 간격은 조금 넉넉하게 줍니다. */
-  margin-bottom: 50px !important; 
+  margin-top: 0;
+  margin-bottom: 55px;
 }
 
 .portfolio-banner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(135deg, #ffffff 0%, #f4f7fc 100%);
-  border: 1px solid #e2e8f0;
+
+  padding: 28px 34px;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
-  padding: 40px 50px; /* 패딩을 약간 더 키워 배너를 넉넉하게 만듭니다 */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  position: relative;
+
+  box-shadow:
+    0 2px 8px rgba(0,0,0,.05),
+    0 10px 24px rgba(0,0,0,.04);
+
   overflow: hidden;
 }
 
-/* 배경 도트 무늬 */
-.portfolio-banner::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 60px;
-  height: 60px;
-  background-image: radial-gradient(#d1d8e0 2.5px, transparent 2.5px);
-  background-size: 15px 15px;
-  opacity: 0.6;
-}
-.portfolio-banner::after {
-  content: "";
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  width: 60px;
-  height: 60px;
-  background-image: radial-gradient(#d1d8e0 2.5px, transparent 2.5px);
-  background-size: 15px 15px;
-  opacity: 0.6;
-}
+/* -----------------------------
+   왼쪽 썸네일 영역
+------------------------------ */
 
-.pb-left {
+.pb-preview {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-}
 
-.pb-pdf-img {
-  width: 160px; /* 아이콘 크기 확대 */
-  height: auto;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.1));
-}
-
-.pb-center {
-  flex: 2;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
-  z-index: 1;
-  padding: 0 20px;
+  gap: 18px;
 }
 
-.pb-badge {
-  display: inline-block;
-  background-color: #eef2ff;
-  color: #3b82f6;
-  font-size: 1.1rem; /* 뱃지 글자 크기 확대 */
-  font-weight: 700;
-  padding: 8px 18px; /* 뱃지 여백 확대 */
-  border-radius: 20px;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
-}
+.pb-preview img {
+  width: 270px;
+  height: auto;
 
-.pb-title {
-  font-size: 2.8rem !important; /* 제목 크기 대폭 확대 */
-  font-weight: 800 !important;
-  color: #1e293b !important;
-  margin-bottom: 15px !important;
-  border-bottom: none !important;
-  display: block !important;
-}
-
-.pb-subtitle {
-  font-size: 1.4rem; /* 부제목 크기 확대 */
-  color: #64748b;
-  margin-bottom: 30px;
-  word-break: keep-all;
-}
-
-.pb-button {
-  display: inline-block;
-  background-color: #2563eb;
-  color: #ffffff !important;
-  font-size: 1.4rem; /* 버튼 글자 크기 확대 */
-  font-weight: 700;
-  padding: 16px 36px; /* 버튼 자체 크기 확대 */
   border-radius: 8px;
-  text-decoration: none !important;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+
+  background: #fff;
+
+  border: 1px solid #ececec;
+
+  box-shadow:
+      0 3px 8px rgba(0,0,0,.08);
+
+  transition: .2s ease;
 }
 
-.pb-button:hover {
-  background-color: #1d4ed8;
+.pb-preview img:hover {
   transform: translateY(-2px);
 }
 
-.pb-note {
-  font-size: 1.1rem; /* 안내 문구 크기 확대 */
-  color: #94a3b8;
-  margin-top: 15px;
-}
+/* -----------------------------
+   오른쪽 설명
+------------------------------ */
 
-.pb-right {
-  flex: 1.2;
+.pb-info {
+  width: 340px;
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  z-index: 1;
+
+  margin-left: 40px;
 }
 
 .pb-checklist {
   list-style: none;
-  padding: 0 !important;
-  margin: 0 !important;
-  text-align: left;
+
+  padding: 0;
+  margin: 0 0 24px 0;
 }
 
 .pb-checklist li {
-  font-size: 1.4rem; /* 체크리스트 글자 크기 확대 */
-  color: #334155;
-  margin-bottom: 16px; /* 줄 간격 확대 */
   display: flex;
   align-items: center;
+
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+
+  margin-bottom: 16px;
+
+  line-height: 1.4;
 }
 
-.pb-checklist li i {
-  color: #3b82f6;
+.pb-checklist li:last-child {
+  margin-bottom: 0;
+}
+
+.pb-checklist i {
   margin-right: 12px;
-  font-size: 1.6rem; /* 체크 아이콘 크기 확대 */
+
+  font-size: 21px;
+
+  color: #222;
 }
 
-/* 태블릿 & 모바일 환경 반응형 처리 */
-@media (max-width: 992px) {
+/* -----------------------------
+   버튼
+------------------------------ */
+
+.pb-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  padding: 15px 28px;
+
+  margin-top: 26px;
+
+  border-radius: 8px;
+
+  background: #17345d;
+
+  color: #fff !important;
+
+  text-decoration: none;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  box-shadow:
+      0 4px 10px rgba(0,0,0,.14);
+
+  transition: .2s ease;
+}
+
+.pb-button:hover {
+  background: #102949;
+  transform: translateY(-2px);
+}
+
+.pb-button i {
+  font-size: 18px;
+}
+
+/* -----------------------------
+   반응형
+------------------------------ */
+
+@media (max-width: 1100px) {
+
   .portfolio-banner {
+
     flex-direction: column;
-    padding: 30px 20px;
+
+    align-items: flex-start;
+
+    padding: 24px;
   }
-  .pb-left, .pb-right {
-    margin: 20px 0;
-  }
-  .pb-center {
-    padding: 0;
-  }
-  .pb-right {
-    border-top: 1px dashed #cbd5e1;
-    padding-top: 25px;
+
+  .pb-preview {
+
     width: 100%;
-    justify-content: flex-start;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+  }
+
+  .pb-preview img {
+
+    width: 320px;
+
+    max-width: 100%;
+  }
+
+  .pb-info {
+
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .pb-button {
+
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .pb-preview {
+
+    flex-direction: column;
+  }
+
+  .pb-preview img {
+
+    width: 100%;
+  }
+
+  .pb-checklist li {
+
+    font-size: 18px;
+  }
+
+  .pb-button {
+
+    font-size: 18px;
   }
 }
