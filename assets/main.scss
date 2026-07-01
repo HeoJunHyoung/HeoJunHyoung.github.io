@@ -287,198 +287,29 @@ body {
 
 
 
-// /* =========================================
-//    9. Portfolio Banner (포트폴리오 보러가기)
-//    ========================================= */
-// .portfolio-banner-container {
-//   /* 1. 간격 축소: 윗쪽 여백을 없애거나 줄여서 헤더 바로 아래에 붙입니다. */
-//   /* 더 바짝 붙이고 싶다면 -10px, -20px 처럼 음수(-) 값을 넣으시면 됩니다. */
-//   margin-top: 0px !important; 
-  
-//   /* About Me 섹션과의 간격은 조금 넉넉하게 줍니다. */
-//   margin-bottom: 50px !important; 
-// }
-
-// .portfolio-banner {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//   background: linear-gradient(135deg, #ffffff 0%, #f4f7fc 100%);
-//   border: 1px solid #e2e8f0;
-//   border-radius: 16px;
-//   padding: 40px 50px; /* 패딩을 약간 더 키워 배너를 넉넉하게 만듭니다 */
-//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// /* 배경 도트 무늬 */
-// .portfolio-banner::before {
-//   content: "";
-//   position: absolute;
-//   top: 15px;
-//   left: 15px;
-//   width: 60px;
-//   height: 60px;
-//   background-image: radial-gradient(#d1d8e0 2.5px, transparent 2.5px);
-//   background-size: 15px 15px;
-//   opacity: 0.6;
-// }
-// .portfolio-banner::after {
-//   content: "";
-//   position: absolute;
-//   bottom: 15px;
-//   right: 15px;
-//   width: 60px;
-//   height: 60px;
-//   background-image: radial-gradient(#d1d8e0 2.5px, transparent 2.5px);
-//   background-size: 15px 15px;
-//   opacity: 0.6;
-// }
-
-// .pb-left {
-//   flex: 1;
-//   display: flex;
-//   justify-content: center;
-//   z-index: 1;
-// }
-
-// .pb-pdf-img {
-//   width: 160px; /* 아이콘 크기 확대 */
-//   height: auto;
-//   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.1));
-// }
-
-// .pb-center {
-//   flex: 2;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: center;
-//   z-index: 1;
-//   padding: 0 20px;
-// }
-
-// .pb-badge {
-//   display: inline-block;
-//   background-color: #eef2ff;
-//   color: #3b82f6;
-//   font-size: 1.1rem; /* 뱃지 글자 크기 확대 */
-//   font-weight: 700;
-//   padding: 8px 18px; /* 뱃지 여백 확대 */
-//   border-radius: 20px;
-//   margin-bottom: 15px;
-//   letter-spacing: 0.5px;
-// }
-
-// .pb-title {
-//   font-size: 2.8rem !important; /* 제목 크기 대폭 확대 */
-//   font-weight: 800 !important;
-//   color: #1e293b !important;
-//   margin-bottom: 15px !important;
-//   border-bottom: none !important;
-//   display: block !important;
-// }
-
-// .pb-subtitle {
-//   font-size: 1.4rem; /* 부제목 크기 확대 */
-//   color: #64748b;
-//   margin-bottom: 30px;
-//   word-break: keep-all;
-// }
-
-// .pb-button {
-//   display: inline-block;
-//   background-color: #2563eb;
-//   color: #ffffff !important;
-//   font-size: 1.4rem; /* 버튼 글자 크기 확대 */
-//   font-weight: 700;
-//   padding: 16px 36px; /* 버튼 자체 크기 확대 */
-//   border-radius: 8px;
-//   text-decoration: none !important;
-//   transition: background-color 0.3s ease, transform 0.2s ease;
-//   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-// }
-
-// .pb-button:hover {
-//   background-color: #1d4ed8;
-//   transform: translateY(-2px);
-// }
-
-// .pb-note {
-//   font-size: 1.1rem; /* 안내 문구 크기 확대 */
-//   color: #94a3b8;
-//   margin-top: 15px;
-// }
-
-// .pb-right {
-//   flex: 1.2;
-//   display: flex;
-//   justify-content: center;
-//   z-index: 1;
-// }
-
-// .pb-checklist {
-//   list-style: none;
-//   padding: 0 !important;
-//   margin: 0 !important;
-//   text-align: left;
-// }
-
-// .pb-checklist li {
-//   font-size: 1.4rem; /* 체크리스트 글자 크기 확대 */
-//   color: #334155;
-//   margin-bottom: 16px; /* 줄 간격 확대 */
-//   display: flex;
-//   align-items: center;
-// }
-
-// .pb-checklist li i {
-//   color: #3b82f6;
-//   margin-right: 12px;
-//   font-size: 1.6rem; /* 체크 아이콘 크기 확대 */
-// }
-
-// /* 태블릿 & 모바일 환경 반응형 처리 */
-// @media (max-width: 992px) {
-//   .portfolio-banner {
-//     flex-direction: column;
-//     padding: 30px 20px;
-//   }
-//   .pb-left, .pb-right {
-//     margin: 20px 0;
-//   }
-//   .pb-center {
-//     padding: 0;
-//   }
-//   .pb-right {
-//     border-top: 1px dashed #cbd5e1;
-//     padding-top: 25px;
-//     width: 100%;
-//     justify-content: flex-start;
-//   }
-// }
-
 /* =========================================
    9. Portfolio Banner (포트폴리오 보러가기)
    ========================================= */
 .portfolio-banner-container {
+  /* 1. 간격 축소: 윗쪽 여백을 없애거나 줄여서 헤더 바로 아래에 붙입니다. */
+  /* 더 바짝 붙이고 싶다면 -10px, -20px 처럼 음수(-) 값을 넣으시면 됩니다. */
   margin-top: 0px !important; 
+  
+  /* About Me 섹션과의 간격은 조금 넉넉하게 줍니다. */
   margin-bottom: 50px !important; 
 }
 
 .portfolio-banner {
   display: flex;
-  align-items: stretch; /* 높이 맞춤 */
+  align-items: center;
   justify-content: space-between;
   background: linear-gradient(135deg, #ffffff 0%, #f4f7fc 100%);
   border: 1px solid #e2e8f0;
   border-radius: 16px;
-  padding: 30px 40px;
+  padding: 40px 50px; /* 패딩을 약간 더 키워 배너를 넉넉하게 만듭니다 */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
-  gap: 20px;
 }
 
 /* 배경 도트 무늬 */
@@ -505,156 +336,64 @@ body {
   opacity: 0.6;
 }
 
-/* ===== 왼쪽 영역 ===== */
 .pb-left {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 1;
-  min-width: 120px;
 }
 
 .pb-pdf-img {
-  width: 140px;
+  width: 160px; /* 아이콘 크기 확대 */
   height: auto;
   filter: drop-shadow(0 8px 16px rgba(0,0,0,0.1));
 }
 
-/* ===== 중앙 영역 (슬라이드) ===== */
 .pb-center {
-  flex: 3;
+  flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   z-index: 1;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .pb-badge {
   display: inline-block;
   background-color: #eef2ff;
   color: #3b82f6;
-  font-size: 0.9rem;
+  font-size: 1.1rem; /* 뱃지 글자 크기 확대 */
   font-weight: 700;
-  padding: 6px 16px;
+  padding: 8px 18px; /* 뱃지 여백 확대 */
   border-radius: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   letter-spacing: 0.5px;
 }
 
 .pb-title {
-  font-size: 2.2rem !important;
+  font-size: 2.8rem !important; /* 제목 크기 대폭 확대 */
   font-weight: 800 !important;
   color: #1e293b !important;
-  margin-bottom: 5px !important;
+  margin-bottom: 15px !important;
   border-bottom: none !important;
   display: block !important;
 }
 
 .pb-subtitle {
-  font-size: 1rem;
+  font-size: 1.4rem; /* 부제목 크기 확대 */
   color: #64748b;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   word-break: keep-all;
 }
 
-/* ===== 슬라이드 뷰어 ===== */
-.slide-viewer {
-  width: 100%;
-  max-width: 500px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  position: relative;
-  margin-bottom: 15px;
-}
-
-.slide-viewer img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-  border-radius: 8px;
-  background: #f8fafc;
-  transition: opacity 0.3s ease;
-}
-
-/* 슬라이드 컨트롤 */
-.slide-controls-banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 10px;
-}
-
-.slide-controls-banner button {
-  padding: 6px 18px;
-  border: none;
-  border-radius: 6px;
-  background: #2563eb;
-  color: white;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.slide-controls-banner button:hover:not(:disabled) {
-  background: #1d4ed8;
-  transform: translateY(-1px);
-}
-
-.slide-controls-banner button:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.slide-controls-banner #banner-counter {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #1e293b;
-  min-width: 60px;
-}
-
-/* 하단 점 네비게이션 */
-.banner-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 10px;
-}
-
-.banner-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #cbd5e1;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.banner-dot.active {
-  background: #2563eb;
-  transform: scale(1.3);
-}
-
-.banner-dot:hover {
-  background: #94a3b8;
-}
-
-/* ===== 버튼 ===== */
 .pb-button {
   display: inline-block;
   background-color: #2563eb;
   color: #ffffff !important;
-  font-size: 1.1rem;
+  font-size: 1.4rem; /* 버튼 글자 크기 확대 */
   font-weight: 700;
-  padding: 12px 30px;
+  padding: 16px 36px; /* 버튼 자체 크기 확대 */
   border-radius: 8px;
   text-decoration: none !important;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -667,19 +406,16 @@ body {
 }
 
 .pb-note {
-  font-size: 0.9rem;
+  font-size: 1.1rem; /* 안내 문구 크기 확대 */
   color: #94a3b8;
-  margin-top: 8px;
+  margin-top: 15px;
 }
 
-/* ===== 오른쪽 영역 ===== */
 .pb-right {
   flex: 1.2;
   display: flex;
   justify-content: center;
-  align-items: center;
   z-index: 1;
-  min-width: 150px;
 }
 
 .pb-checklist {
@@ -690,59 +426,35 @@ body {
 }
 
 .pb-checklist li {
-  font-size: 1rem;
+  font-size: 1.4rem; /* 체크리스트 글자 크기 확대 */
   color: #334155;
-  margin-bottom: 12px;
+  margin-bottom: 16px; /* 줄 간격 확대 */
   display: flex;
   align-items: center;
 }
 
 .pb-checklist li i {
   color: #3b82f6;
-  margin-right: 10px;
-  font-size: 1.2rem;
+  margin-right: 12px;
+  font-size: 1.6rem; /* 체크 아이콘 크기 확대 */
 }
 
-/* ===== 반응형 ===== */
+/* 태블릿 & 모바일 환경 반응형 처리 */
 @media (max-width: 992px) {
   .portfolio-banner {
     flex-direction: column;
-    padding: 25px 20px;
+    padding: 30px 20px;
   }
   .pb-left, .pb-right {
-    margin: 15px 0;
+    margin: 20px 0;
   }
   .pb-center {
     padding: 0;
-    width: 100%;
-  }
-  .slide-viewer {
-    max-width: 100%;
   }
   .pb-right {
     border-top: 1px dashed #cbd5e1;
-    padding-top: 20px;
+    padding-top: 25px;
     width: 100%;
     justify-content: flex-start;
-  }
-  .pb-pdf-img {
-    width: 100px;
-  }
-}
-
-@media (max-width: 576px) {
-  .slide-viewer img {
-    max-height: 200px;
-  }
-  .pb-title {
-    font-size: 1.6rem !important;
-  }
-  .pb-button {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-  .slide-controls-banner button {
-    padding: 5px 14px;
-    font-size: 0.8rem;
   }
 }
