@@ -283,222 +283,245 @@ body {
 
 
 
-
-
 /* =========================================
    Portfolio Banner
    ========================================= */
 
 .portfolio-banner-container {
-  margin-top: 0;
-  margin-bottom: 55px;
+    margin-top: 0;
+    margin-bottom: 45px;
 }
 
 .portfolio-banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-  padding: 28px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
+    background: #fff;
 
-  box-shadow:
-    0 2px 8px rgba(0,0,0,.05),
-    0 10px 24px rgba(0,0,0,.04);
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
 
-  overflow: hidden;
+    padding: 18px 24px;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.05),
+        0 8px 20px rgba(0,0,0,.04);
+
+    overflow: hidden;
 }
 
-/* -----------------------------
-   왼쪽 썸네일 영역
------------------------------- */
+/* -------------------------
+   썸네일
+-------------------------- */
 
 .pb-preview {
-  flex: 1;
 
-  display: flex;
-  align-items: center;
-  gap: 18px;
+    flex: 1.6;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
 }
 
 .pb-preview img {
-  width: 270px;
-  height: auto;
 
-  border-radius: 8px;
+    width: 340px;
 
-  background: #fff;
+    height: auto;
 
-  border: 1px solid #ececec;
+    border-radius: 6px;
 
-  box-shadow:
-      0 3px 8px rgba(0,0,0,.08);
+    border: 1px solid #ececec;
 
-  transition: .2s ease;
+    background: #fff;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.10);
+
+    transition: .2s ease;
 }
 
 .pb-preview img:hover {
-  transform: translateY(-2px);
+
+    transform: translateY(-2px);
 }
 
-/* -----------------------------
-   오른쪽 설명
------------------------------- */
+/* -------------------------
+   오른쪽
+-------------------------- */
 
 .pb-info {
-  width: 340px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    width: 270px;
 
-  margin-left: 40px;
+    margin-left: 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.pb-checklist {
-  list-style: none;
+/* -------------------------
+   체크리스트
+-------------------------- */
 
-  padding: 0;
-  margin: 0 0 24px 0;
+.pb-checklist {
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
 }
 
 .pb-checklist li {
-  display: flex;
-  align-items: center;
 
-  font-size: 24px;
-  font-weight: 700;
-  color: #222;
+    display: flex;
+    align-items: center;
 
-  margin-bottom: 16px;
+    font-size: 17px;
 
-  line-height: 1.4;
+    font-weight: 700;
+
+    color: #222;
+
+    margin-bottom: 10px;
+
+    line-height: 1.4;
 }
 
 .pb-checklist li:last-child {
-  margin-bottom: 0;
+
+    margin-bottom: 0;
 }
 
 .pb-checklist i {
-  margin-right: 12px;
 
-  font-size: 21px;
+    margin-right: 10px;
 
-  color: #222;
+    font-size: 16px;
+
+    color: #222;
 }
 
-/* -----------------------------
+/* -------------------------
    버튼
------------------------------- */
+-------------------------- */
 
 .pb-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
 
-  width: fit-content;
+    display: inline-flex;
 
-  padding: 15px 28px;
+    align-items: center;
+    justify-content: center;
 
-  margin-top: 26px;
+    gap: 10px;
 
-  border-radius: 8px;
+    width: fit-content;
 
-  background: #17345d;
+    margin-top: 18px;
 
-  color: #fff !important;
+    padding: 11px 22px;
 
-  text-decoration: none;
+    border-radius: 8px;
 
-  font-size: 21px;
-  font-weight: 700;
+    background: #17345d;
 
-  box-shadow:
-      0 4px 10px rgba(0,0,0,.14);
+    color: #fff !important;
 
-  transition: .2s ease;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,.15);
+
+    transition: .2s ease;
 }
 
 .pb-button:hover {
-  background: #102949;
-  transform: translateY(-2px);
+
+    background: #102949;
+
+    transform: translateY(-2px);
 }
 
 .pb-button i {
-  font-size: 18px;
+
+    font-size: 15px;
 }
 
-/* -----------------------------
+/* -------------------------
    반응형
------------------------------- */
+-------------------------- */
 
-@media (max-width: 1100px) {
+@media (max-width:1100px){
 
-  .portfolio-banner {
+    .portfolio-banner{
 
-    flex-direction: column;
+        flex-direction: column;
 
-    align-items: flex-start;
+        align-items: flex-start;
+    }
 
-    padding: 24px;
-  }
+    .pb-preview{
 
-  .pb-preview {
+        width:100%;
 
-    width: 100%;
+        justify-content:center;
 
-    justify-content: center;
+        flex-wrap:wrap;
 
-    flex-wrap: wrap;
+        margin-bottom:24px;
+    }
 
-    margin-bottom: 30px;
-  }
+    .pb-preview img{
 
-  .pb-preview img {
+        width:320px;
 
-    width: 320px;
+        max-width:100%;
+    }
 
-    max-width: 100%;
-  }
+    .pb-info{
 
-  .pb-info {
+        width:100%;
 
-    width: 100%;
+        margin-left:0;
+    }
 
-    margin-left: 0;
-  }
+    .pb-button{
 
-  .pb-button {
+        width:100%;
 
-    width: 100%;
+        justify-content:center;
+    }
 
-    justify-content: center;
-  }
 }
 
-@media (max-width: 700px) {
+@media (max-width:700px){
 
-  .pb-preview {
+    .pb-preview{
 
-    flex-direction: column;
-  }
+        flex-direction:column;
+    }
 
-  .pb-preview img {
+    .pb-preview img{
 
-    width: 100%;
-  }
+        width:100%;
+    }
 
-  .pb-checklist li {
+    .pb-checklist li{
 
-    font-size: 18px;
-  }
+        font-size:16px;
+    }
 
-  .pb-button {
+    .pb-button{
 
-    font-size: 18px;
-  }
+        font-size:16px;
+    }
+
 }
